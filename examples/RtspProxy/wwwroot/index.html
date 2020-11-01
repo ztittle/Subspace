@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RTSP Proxy Demo</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+    <form id="rtspProxyForm" onsubmit="return playStream(event)">
+        <label for="rtspStreamUrlInput">RTSP Url</label> <input id="rtspStreamUrlInput" type="text" /> <button type="submit">Play</button>
+    </form>
+    <video id="remoteVideo1" playsinline autoplay muted></video>
+    <div id="sdpContainer">
+        <div>
+            <h1>Local SDP</h1>
+            <div id="localSdpDiv"></div>
+        </div>
+        <div>
+            <h1>Remote SDP</h1>
+            <div id="remoteSdpDiv"></div>
+        </div>
+    </div>
+    <h1>Stats</h1>
+    <div id="statsDiv">
+        <div>
+            <span class="statLabel">bytesReceived</span>
+            <span id="bytesReceivedSpan"></span>
+        </div>
+        <div>
+            <span class="statLabel">bytesSent</span>
+            <span id="bytesSentSpan"></span>
+        </div>
+        <div>
+            <span class="statLabel">dtlsCipher</span>
+            <span id="dtlsCipherSpan"></span>
+        </div>
+        <div>
+            <span class="statLabel">dtlsState</span>
+            <span id="dtlsStateSpan"></span>
+        </div>
+        <div>
+            <span class="statLabel">srtpCipher</span>
+            <span id="srtpCipherSpan"></span>
+        </div>
+        <div>
+            <span class="statLabel">timestamp</span>
+            <span id="timestampSpan"></span>
+        </div>
+    </div>
+    <h1>Log</h1>
+    <div id="logDiv"></div>
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#remoteVideo1 {
+    width: 800px;
+}
+
+#rtspProxyForm {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: 800px;
+}
+
+#rtspStreamUrlInput {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#logDiv {
+    height: 100px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    resize: both;
+}
+
+#logDiv div {
+    border-bottom: solid;
+    border-width: thin;
+}
+
+#sdpContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sdpContainer > * {
+    margin-right: 10px;
+}
+
+.statLabel {
+    font-weight: bold;
+}
